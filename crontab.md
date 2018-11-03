@@ -1,14 +1,14 @@
 ## CRONTAB
-### Commands
-+ `/etc/rc.d/cron restart` -- restart service
-+ `crontab -l` -- print the entries from crontab
-+ `crontab -e` -- create and edit a user crontab entries
-+ `crontab -r` -- remove all of the cron jobs in a user 
+### Комманды
++ `/etc/rc.d/cron restart` -- перезагрузить сервис
++ `crontab -l` -- показать все
++ `crontab -e` -- создать крон файл
++ `crontab -r` -- удалить все
 
-### Files
-+ `/var/log/cron` -- logs
-+ `/var/cron/tabs` -- crontabs users files
-+ `/etc/crontab` -- root crontab file
+### Файлы
++ `/var/log/cron` -- логи
++ `/var/cron/tabs` -- пользовательнские файлы
++ `/etc/crontab` -- рутовский файл
 
-### Links
+### Ссылки
 https://calomel.org/cron_at.html
