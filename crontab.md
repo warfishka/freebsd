@@ -7,7 +7,8 @@
 
 ### Files
 + `/var/log/cron` -- logs
-+ `/var/cron/tabs` -- crontabs files
++ `/var/cron/tabs` -- crontabs users files
++ `/etc/crontab` -- root crontab file
 
 ### Links
 https://calomel.org/cron_at.html
