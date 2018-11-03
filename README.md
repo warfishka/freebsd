@@ -1,2 +1,2 @@
-# freebsd
-freebsd console book
+# FREEBSD (RU)
+Поваренная книга консольских будней FREEBSD 11.2
