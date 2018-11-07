@@ -78,17 +78,6 @@ server {
 
 		default_type "text/plain";
 	}
-	
-	location / {
-        # index rewrite with out extention
-		try_files $uri $uri/ /index.php?$args;
-
-		if (!-e $request_filename) {
-
-			rewrite ^/(.*)$ /index.php?node=$1 last;
-		}
-
-	}
 
 }
 ```
