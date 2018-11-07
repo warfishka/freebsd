@@ -2,10 +2,10 @@
 https://certbot.eff.org/lets-encrypt/freebsd-nginx
 
 + `pkg install py27-certbot` -- установка пакета certbot
++ `certbot certonly --webroot -w /var/www/cxm.war.fish -d domain.com` -- сгенерировать сертификат с плагином webroot
++ `openssl dhparam -out /etc/ssl/certs/dhparam.pem 4096` -- сгенерировать *concatenated certificate container*
 
-+ `openssl dhparam -out /etc/ssl/certs/dhparam.pem 4096` -- 
-
-### Глобальные настройки nginx
+### Глобальные настройки nginx+sll
 
 ```nginx
 # Advanced config for NGINX
@@ -14,7 +14,7 @@ add_header X-XSS-Protection "1; mode=block";
 add_header X-Content-Type-Options nosniff;
 ```
 
-### Один из доменов nginx
+### Один из доменов nginx+ssl
 ```nginx
 # Redirect all HTTP traffic to HTTPS
 server {
@@ -84,3 +84,6 @@ server {
 
 }
 ```
+
+service nginx restart
+
