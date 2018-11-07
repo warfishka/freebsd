@@ -5,6 +5,7 @@ https://certbot.eff.org/lets-encrypt/freebsd-nginx
 + `certbot certonly --webroot -w /var/www/cxm.war.fish -d domain.com` -- сгенерировать сертификат с плагином webroot
 + `openssl dhparam -out /etc/ssl/certs/dhparam.pem 4096` -- сгенерировать *concatenated certificate container*
 
+
 ### Глобальные настройки nginx+sll
 
 ```nginx
@@ -84,6 +85,6 @@ server {
 
 }
 ```
-
-service nginx restart
+Создать файл папки `/.well-known/acme-challenge` в конрне веб сервера
++ `service nginx restart` -- перезагружаем nginx и смотрим ошибки;)
 
