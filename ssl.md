@@ -5,13 +5,17 @@ https://certbot.eff.org/lets-encrypt/freebsd-nginx
 
 + `openssl dhparam -out /etc/ssl/certs/dhparam.pem 4096` -- 
 
+### Глобальные настройки nginx
 
 ```nginx
 # Advanced config for NGINX
 server_tokens off;
 add_header X-XSS-Protection "1; mode=block";
 add_header X-Content-Type-Options nosniff;
+```
 
+### Один из доменов nginx
+```nginx
 # Redirect all HTTP traffic to HTTPS
 server {
 
@@ -21,7 +25,6 @@ server {
 	index index.php;
 	root /var/www/domain.com;
 }
-
 
 # SSL configuration
 server {
